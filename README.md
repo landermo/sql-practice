@@ -79,3 +79,16 @@
     'insert into users (first_name, last_name, email) values ('Laura', 'Montgomery', 'laura@bbb.com')'
     
     'insert into orders (user_id, item_id, quantity, created_at) values (51, 58, 1,datetime('now'))'
+    
+10.  What item was ordered most often? Grossed the most money?
+
+      These 3 tied for ordered the most often:
+      
+       "10", "46", "65"
+       
+     
+       select * from orders GROUP BY item_id
+       HAVING COUNT(*) >= 9
+       
+11. What user spent the most?
+12. What were the top 3 highest grossing categories?
