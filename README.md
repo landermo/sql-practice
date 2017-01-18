@@ -89,5 +89,12 @@
        select * from orders GROUP BY item_id
        HAVING COUNT(*) >= 9
        
+       Grossed the most money? "Incredible Granite Car"	"525240"
+       
+        select items.title, 
+        sum(orders.quantity * items.price) as totals from orders 
+        inner join items on items.id = orders.item_id  group by orders.item_id order by totals desc limit 1
+         
+       
 11. What user spent the most?
 12. What were the top 3 highest grossing categories?
